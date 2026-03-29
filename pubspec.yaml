@@ -1,0 +1,124 @@
+name: clean_guru
+description: "A new Flutter project."
+publish_to: 'none'
+
+# Version management
+version: 1.0.2+15
+
+
+# Dart SDK configuration
+environment:
+  sdk: ^3.6.1
+
+# Project dependencies
+dependencies:
+  flutter:
+    sdk: flutter
+  google_mobile_ads: ^4.0.0  # Instead of 5.3.1
+
+  flutter_localizations:
+    sdk: flutter
+
+  # Core Flutter packages
+  cupertino_icons: ^1.0.8
+
+  # Permissions and system integration
+  permission_handler: ^11.0.0
+  device_info_plus: ^9.1.2
+  package_info_plus: ^4.2.0
+  system_info2: ^4.0.0
+  screen_brightness: ^0.2.2
+
+  # File and path handling
+  path: ^1.8.3
+  path_provider: ^2.1.1
+
+  # Media and image handling
+  video_player: ^2.8.1
+  image: ^4.0.15
+  image_picker: ^1.0.7
+  flutter_cache_manager: ^3.3.1
+
+  # Utility packages
+  intl: ^0.20.2
+
+  crypto: ^3.0.3
+  fluttertoast: ^8.2.4
+  battery_plus: ^4.0.2
+  shared_preferences: ^2.2.2
+
+  # App functionality
+  installed_apps: ^1.5.2
+  flutter_contacts: ^1.1.7+1
+
+
+  # Authentication and cloud services
+  google_sign_in: ^6.2.0
+  googleapis_auth: ^1.4.1
+  googleapis: ^12.0.0
+
+
+  # State management and UI utilities
+  provider: ^6.0.5
+  url_launcher: ^6.1.14
+  share_plus: ^7.0.0
+  file_picker: ^10.1.2 # Try a much older version
+
+
+
+
+  # In-app purchases
+  in_app_purchase: ^3.1.10
+
+# Development dependencies
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Icon generation
+  flutter_launcher_icons: ^0.14.3
+
+  # Linting and code quality
+  flutter_lints: ^5.0.0
+
+# Flutter launcher icons configuration
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+
+  min_sdk_android: 21
+
+flutter:
+  # Enable Material Design
+  uses-material-design: true
+
+  # Localization
+  generate: true
+
+  # Asset declarations
+  assets:
+    - assets/credentials/
+    - assets/splashicon.png
+    - assets/onboarding1.png
+    - assets/onboarding2.png
+    - assets/onboarding3.png
+    - assets/whatsicon.png
+    - assets/subscription_bg.png
+    - assets/ketaba.png
+    - assets/prush.png
+    - assets/folder.png
+    - assets/zakhrfa.png
+    - assets/wallet.png
+    - assets/speedtest.png
+    - assets/sendsnap.png
+    - assets/qibla.png
+    - assets/khatwat.png
+    - assets/fitcal.png
+    - assets/currency.png
+    - assets/muslim.png
+    - assets/weather.png
+    - assets/muslim.png
+    - assets/icon/icon.png
+    - assets/pointer.png  # Use the actual name of your needle image file
+

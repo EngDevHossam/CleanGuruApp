@@ -1,0 +1,46 @@
+
+
+require File.expand_path(File.join('..', 'Flutter', 'podhelper.rb'), __FILE__)
+
+platform :ios, '12.0'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  install_all_flutter_pods(File.dirname(File.realpath(__FILE__)))
+
+  # Flutter Plugins
+  pod 'battery_plus', :path => '.symlinks/plugins/battery_plus/ios'
+  pod 'device_info_plus', :path => '.symlinks/plugins/device_info_plus/ios'
+  pod 'flutter_contacts', :path => '.symlinks/plugins/flutter_contacts/ios'
+  pod 'fluttertoast', :path => '.symlinks/plugins/fluttertoast/ios'
+  pod 'google_sign_in_ios', :path => '.symlinks/plugins/google_sign_in_ios/ios'
+  pod 'image_picker_ios', :path => '.symlinks/plugins/image_picker_ios/ios'
+  pod 'in_app_purchase_storekit', :path => '.symlinks/plugins/in_app_purchase_storekit/ios'
+  pod 'package_info_plus', :path => '.symlinks/plugins/package_info_plus/ios'
+  pod 'path_provider_foundation', :path => '.symlinks/plugins/path_provider_foundation/ios'
+  pod 'permission_handler_apple', :path => '.symlinks/plugins/permission_handler_apple/ios'
+  pod 'screen_brightness_ios', :path => '.symlinks/plugins/screen_brightness_ios/ios'
+  pod 'share_plus', :path => '.symlinks/plugins/share_plus/ios'
+  pod 'shared_preferences_foundation', :path => '.symlinks/plugins/shared_preferences_foundation/ios'
+  pod 'sqflite_darwin', :path => '.symlinks/plugins/sqflite_darwin/ios'
+  pod 'url_launcher_ios', :path => '.symlinks/plugins/url_launcher_ios/ios'
+  pod 'video_player_avfoundation', :path => '.symlinks/plugins/video_player_avfoundation/ios'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+    end
+  end
+end
+

@@ -1,0 +1,2 @@
+/Users/test/Documents/clean_guru/android/app/.cxx/Debug/5p6uz174/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/test/Documents/clean_guru/android/app/.cxx/Debug/5p6uz174/armeabi-v7a/CMakeFiles/rebuild_cache.dir
